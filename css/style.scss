@@ -1,0 +1,149 @@
+/* Start Variables */
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+/* Start nav */
+.nav {
+  padding: 20px;
+  background-color: #18b491;
+  color: #fff;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .logo {
+      width: 60px;
+      img {
+        width: 100%;
+      }
+    }
+    .list {
+      display: flex;
+      justify-content: space-evenly;
+      flex-basis: 40%;
+      li {
+        a {
+          transition: 0.3s;
+          font-size: 20px;
+          &:hover {
+            color: #ff575d;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      .list {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+/* End nav */
+.content {
+  display: flex;
+  .main {
+    padding: 20px;
+    width: 70vw;
+    background-color: #f0f0f0;
+    text-align: center;
+    color: #2c2c2c;
+    font-size: 18px;
+    .title {
+      font-size: 36px;
+      margin: 10px 0;
+      span {
+        transition: 0.3s;
+        &:hover {
+          color: #ff575d;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    .para {
+      padding: 20px;
+    }
+    .iamge {
+      display: inline-block;
+      width: 20%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .sidebar {
+    width: 30vw;
+    padding: 20px;
+    background-color: #ffff00;
+    text-align: center;
+    color: #2c2c2c;
+    font-size: 18px;
+    .title {
+      font-size: 36px;
+      margin: 10px 0;
+    }
+    .para {
+      padding: 20px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    .main {
+      width: 98vw;
+    }
+    .sidebar {
+      width: 98vw;
+    }
+  }
+}
+.footer {
+  width: 100vw;
+  padding: 0;
+  img {
+    width: 100%;
+  }
+}
